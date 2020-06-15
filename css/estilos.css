@@ -1,0 +1,272 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --variable-color1: #148F77;
+  --variable-color2: #F9EBEA;
+  --variable-color3: #EAFAF1;
+}
+
+/*Encabezado*/
+header{
+  width: 100%;
+  display: flex;
+  background: var(--variable-color1);
+}
+h1{
+  color: white;
+  font-family: 'Love ya like a sister';
+  padding-left: 20px;
+  padding-right: 10px;
+}
+nav{
+  display: flex;
+}
+li{
+  float: left;
+  list-style-type: none;
+  padding: 10px;
+}
+a{
+  text-decoration: none;
+  font-family: 'DM serif text';
+  color: white;
+}
+
+li:hover a{
+  color: coral;
+}
+
+/*Main*/
+.contenido1{
+  text-align: left;
+  background: var(--variable-color2);
+  opacity: .7;
+  width: 50%;
+  position: absolute;
+  left: 400px;
+  top: 120px;
+  padding: 15px;
+  border-radius: 10px 10px;
+  
+}
+.contenido1 h2{
+  font-family: 'Love ya like a sister';
+  font-size: 40px;
+  
+}
+.contenido1 p{
+ font-family: 'DM serif text';
+ font-size: 25px;
+ 
+}
+.principal{
+  top: 0;
+  margin: 0;
+  padding: 0em;
+  width: 100%;
+  height: 600px;
+  background: url(../images/inicial2.JPG);
+  position: relative;
+}
+
+
+#playa{
+  width: 100%;
+  background: var(--variable-color2);
+}
+
+#parque{
+  width: 100%;
+  background: var(--variable-color3);
+}
+
+#rio{
+  width: 100%;
+  background: lavenderblush;
+}
+
+.contenido{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+.imagen-principal{
+  width: 30%;
+  text-align: center;
+}
+.imagen-principal img{
+  width: 75%;
+  border-radius: 10px;
+}
+.imagen-secundaria{
+  width: 30%;
+  text-align: left;
+}
+.imagen-secundaria img{
+  width: 75%;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+.descripcion{
+  width: 40%;
+  text-align: center;
+}
+.descripcion h2{
+  font-family: 'Love ya like a sister';
+  font-size: 60px;
+}
+.descripcion p{
+  font-family: 'DM serif text';
+  font-size: 15px;
+}
+
+/*Pie de pagina*/
+footer{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+.informacion{
+  width: 45%;
+  padding-left: 30px;
+  font-family: 'Love ya like a sister';
+}
+.contacto{
+  background: #FEF9E7;
+  width: 45%;
+  padding: 15px;
+  font-family: 'Love ya like a sister';
+  border-radius: 10px 10px;
+  border: 2px solid #F5CBA7;
+}
+.contacto input{
+  width: 98%;
+  border: 2px solid #F5CBA7;
+}
+.contacto textarea{
+  width: 98%;
+  border: 2px solid #F5CBA7;
+}
+button{
+  font-family: 'Love ya like a sister';
+  padding: 5px;
+  border-radius: 10px 10px;
+  background: lightsalmon;
+  border: lightsalmon;
+  font-size: 15px;
+}
+
+/*Filtro y animacion*/
+img:hover{
+  transform: scale(1.1);
+  transition: all 0.5 linear;
+   ~webkit-filter: contrast(100px);
+  filter: contrast(80%);
+}
+
+
+/*Media queries*/
+@media screen and (max-width: 900px){
+  header{
+    width: 77%;
+    text-align: center;
+    padding-left: 180px;
+  }
+  .contenido1{
+    width: 65%;
+    top: 50px;
+    left: 100px;
+  }
+  .contenido1 h2{
+    font-size: 35px;
+  }
+  .principal{
+    width: 100%;
+    height: 550px;
+  }
+
+  .contenido{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+  }
+  .imagen-principal{
+    visibility: hidden;
+    background: red;
+  }
+  .descripcion{
+    width: 100%;
+    margin-right: 40px;
+  }
+  .descripcion h2{
+    font-size: 75px;
+  }
+  .descripcion  p{
+    font-size: 18px;
+  }
+  .imagen-secundaria{
+    width: 70%;
+    margin-left: 30px;
+    padding-right: 40px;
+  }
+  .imagen-secundaria img{
+    width: 90%;
+  }  
+  footer{
+    width: 100%;
+    display: flex;
+  }
+  .informacion{
+    text-align: center;
+  }
+  .contacto{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px){
+  header{
+    width: 77%;
+    display: block;
+  }
+  h1{
+    text-align: left;
+  }
+  nav{
+    text-align: center;
+    padding-left: 30px;
+  }
+  .contenido{
+    width: 100%;
+    display: block;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .imagen-principal{
+    visibility: hidden;
+  }
+  .descripcion{
+    width: 90%;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .imagen-secundaria img{
+    width: 100%;
+  }
+  footer{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .informacion{
+    width: 80%;
+    padding-bottom: 20px;
+  }
+  .contacto{
+    width: 80%;
+  }
+
+}
